@@ -248,18 +248,15 @@ body {
   background-position: 0 312px, 100px 456px, 200px 596px;
 }
 
-#sub .route .left {
+#sub .route {
   position: relative;
 }
 
-#sub .route .left::after {
-  content: "";
-  width: 1712px;
-  height: 906px;
+#sub .route>img {
+  z-index: -1;
   position: absolute;
-  top: 260px;
-  left: 200px;
-  background: url(../img/route_bg.png) no-repeat;
+  bottom: 0;
+  left: 300px;
 }
 
 #sub .music {
