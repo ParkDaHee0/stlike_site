@@ -48,6 +48,10 @@ body {
 }
 
 #header .scroll {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 100px 0 0;
   text-align: center;
 }
