@@ -17,4 +17,20 @@ $(document).ready(function () {
     const index = $(this).index();
     $(".tab_list > div").fadeOut(200).eq(index).fadeIn(800);
   });
+
+  //go-top버튼 클릭시 제일 위로 가도록 구동
+  $(window).scroll(function () {
+
+    if ($(this).scrollTop() > 500) {
+      $(".go_top").addClass("on");
+    }
+    else {
+      $(".go_top").removeClass("on");
+    }
+
+  });
+
+  $(".go_top").click(function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });
