@@ -112,11 +112,12 @@ body {
     display: block;
   } */
 
-  #header .header_txt {
+ #header .header_txt {
     position: absolute;
     top: 16%;
-    left: 4%;
+    left: 50%;
     text-align: center;
+    transform: translateX(-50%);
   }
 
   #header .header_txt img {
