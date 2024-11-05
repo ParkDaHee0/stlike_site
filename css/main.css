@@ -38,21 +38,6 @@ body {
   font-weight: 800;
 }
 
-#header h1 br {
-  display: none;
-}
-
-@keyframes scrollbar {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-}
-
 #header .scroll {
   position: absolute;
   bottom: 10%;
@@ -108,11 +93,7 @@ body {
     word-break: keep-all;
   }
 
-  /* #header h1 br {
-    display: block;
-  } */
-
- #header .header_txt {
+  #header .header_txt {
     width: 100%;
     position: absolute;
     top: 16%;
@@ -128,20 +109,6 @@ body {
 }
 
 /*tab*/
-@keyframes tab {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .tab_ico {
   animation: tab 3s linear infinite;
 
@@ -196,6 +163,12 @@ body {
   font-weight: 500;
 }
 
+@media(max-width:1260px) {
+  .tab_ico ul {
+    gap: 80px;
+  }
+}
+
 @media (max-width: 768px) {
   #tab {
     margin: 32px auto 0;
@@ -240,13 +213,13 @@ body {
   }
 
   .tab_list img {
-    width: 70%;
+    width: 60%;
   }
 }
 
 /*mean*/
 #mean {
-  padding: 160px 0;
+  padding: 160px 200px;
   text-align: center;
   background: url(../img/mean.png) no-repeat center / cover;
 }
@@ -267,11 +240,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 200px;
+  gap: 50px;
 }
 
 #mean ul li {
   position: relative;
+  width: calc((100% - 100px) / 3);
   color: #fff;
   font-size: 2.4rem;
 }
@@ -309,7 +283,7 @@ body {
   transform: translateX(-50%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 910px) {
   #mean {
     padding: 80px 16px;
   }
@@ -321,20 +295,16 @@ body {
 
   #mean p {
     padding: 20px 0 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   #mean ul {
     margin: 100px auto 0;
-    gap: 0;
+    gap: 20px;
   }
 
   #mean ul li {
     font-size: 1.4rem;
-  }
-
-  #mean ul li {
-    width: calc(100% / 3);
   }
 
   #mean ul li:first-child::after {
@@ -365,12 +335,14 @@ body {
   padding: 0 0 20px;
   font-size: 6.0rem;
   font-weight: 800;
+  word-break: keep-all;
 }
 
 #sub p {
   color: var(--run-main-gray01);
   font-size: 2.0rem;
   font-weight: 500;
+  word-break: keep-all;
 }
 
 #sub>div {
@@ -380,10 +352,12 @@ body {
 }
 
 #sub .left {
+  width: 50%;
   margin: 0 auto;
 }
 
 #sub .right {
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -401,7 +375,7 @@ body {
   z-index: -1;
   position: absolute;
   bottom: 0;
-  left: 300px;
+  left: 0;
 }
 
 #sub .music {
@@ -417,9 +391,80 @@ body {
   border-radius: 20px;
 }
 
+@media (max-width: 1400px) {
+  #sub {
+    padding: 200px 100px 0;
+    justify-content: space-between;
+  }
+
+  #sub>div {
+    gap: 40px;
+  }
+
+  #sub .left {
+    width: calc((100% - 40px) / 2);
+  }
+
+  #sub .right {
+    width: calc((100% - 40px) / 2);
+  }
+
+  #sub>div {
+    padding-bottom: 160px;
+  }
+
+  #sub img {
+    width: 100%;
+  }
+
+  #sub .route>img {
+    display: none;
+  }
+}
+
+@media(max-width: 1260px) {
+  #sub .music {
+    background-position: top 200px right 0px, top 600px right 300px;
+  }
+}
+
+@media (max-width: 1050px) {
+  #sub h2 {
+    font-size: 4.0rem;
+  }
+
+  #sub p {
+    font-size: 1.6rem;
+  }
+
+  #sub .spark .left {
+    background-image: url(../img/battery02.png), url(../img/battery03.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 300px, 100px 400px;
+  }
+
+  #sub .music {
+    background-position: top 200px right 0px, top 440px right 240px;
+  }
+}
+
+@media(max-width: 860px) {
+  #sub br {
+    display: none;
+  }
+
+  #sub .music {
+    background-position: top 200px right 0px, top 440px right 160px;
+  }
+}
+
 @media (max-width: 768px) {
   #sub {
     padding: 60px 16px 0;
+  }
+
+  #sub br {
+    display: block;
   }
 
   #sub>div {
@@ -441,6 +486,18 @@ body {
     color: var(--run-main-gray01);
     font-size: 1.6rem;
     font-weight: 500;
+  }
+
+  #sub>div {
+    gap: 0;
+  }
+
+  #sub .left {
+    width: 100%;
+  }
+
+  #sub .right {
+    width: 100%;
   }
 
   #sub img {
@@ -521,7 +578,7 @@ body {
 
 @media (max-width: 768px) {
   #footer {
-    padding: 60px 0 60px;
+    padding: 60px 24px 60px;
   }
 
   #footer h1 img {
